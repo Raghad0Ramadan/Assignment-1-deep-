@@ -81,7 +81,7 @@ history = model.fit(train_generator, validation_data=test_generator, epochs=48, 
 # Plotting Accuracy, val_accuracy, loss, val_loss
 fig, ax = plt.subplots(1, 2, figsize=(10, 3))
 ax = ax.ravel()
-for i, met in enumerate(['accuracy', 'loss']):
+for i, met in model(['accuracy', 'loss']):
         ax[i].plot(history.history[met])
         ax[i].plot(history.history['val_' + met])
         ax[i].set_title('Model {}'.format(met))
